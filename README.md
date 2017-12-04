@@ -31,54 +31,110 @@ After you hvae pycreate 2 installed you can now interact with the Roomba using t
 
 This package will use subscriber and publisher nodes to pull the IR readings from the Roomba and display it on screen .
 
+
+
+
 Working with ROS:::::::::::::::::::::::::::
 Enter the following into terminal
+
+
 
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install git
 
+
+
+
 this will update your pi
 
+
+
 Now create a workspace::::::::::::::::
+
+
+
+
+
 mkdir -p /robot/src
 cd~/robot
 catkin_init_workspace
 catkin_make
 source devel/setup.bash
 
+
+
+
+
 Create a publisher package::::::::::::::::::::::
+
+
+
+
 cd~/robot/src
 catkin_create_pkg publisher rospy
 
+
+
+
 Clone publisher.py from github:::::::::::::::::::::::::
+
+
+
 cd ~/robot/src/publisher/src
 curl -o publisher.py https://github.com/minh215/ControllingRoombaUsingPi/blob/master/publisher.py
 
+
 sudo chmod u+x publisher.py
 
+
+
+
+
 Create Subscriber package::::::::::::::::::::::::::
+
+
 cd ~/robot/src
 catkin_create_pkg subscriber rospy
 
+
+
+
 Clone subscriber from github::::::::::::::::::::::
+
+
+
 cd ~/robot/src/subscriber/src
 curl -o subscriber.py https://github.com/minh215/ControllingRoombaUsingPi/blob/master/subscriber.py
 sudo chmod u+x subscriber.py
 
+
+
+
 Now connect the Pi to Roomba using Serial cable: open the first terminal
 Run Ros::::::::::::::::::::::::
+
 cd ~/robot
 catkin_make
 source devel/setup.bash
 roscore
 
+
+
 Run publisher::::::::::::::::::: open a second terminal
+
+
 cd ~/robot
 source devel/setup.bash
 rosrun publisher publisher.py
 
+
+
+
 Run subscriber:::::::::::::::::::: Open a third terminal
+
+
+
 cd ~/robot
 source devel/setup.bash
 rosrun subscriber subscriber.py
