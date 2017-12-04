@@ -53,7 +53,8 @@ catkin_create_pkg publisher rospy
 
 Clone publisher.py from github:::::::::::::::::::::::::
 cd ~/robot/src/publisher/src
-curl -o publisher.py https://raw.githubusercontent.com/wafflefries/iRobotAsimov/master/ros/pub_sensors.py
+curl -o publisher.py https://github.com/minh215/ControllingRoombaUsingPi/blob/master/publisher.py
+
 sudo chmod u+x publisher.py
 
 Create Subscriber package::::::::::::::::::::::::::
@@ -62,7 +63,7 @@ catkin_create_pkg subscriber rospy
 
 Clone subscriber from github::::::::::::::::::::::
 cd ~/robot/src/subscriber/src
-curl -o subscriber.py https://raw.githubusercontent.com/wafflefries/iRobotAsimov/master/ros/sub_wheels.py
+curl -o subscriber.py https://github.com/minh215/ControllingRoombaUsingPi/blob/master/subscriber.py
 sudo chmod u+x subscriber.py
 
 Now connect the Pi to Roomba using Serial cable: open the first terminal
