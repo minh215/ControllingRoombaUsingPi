@@ -40,7 +40,9 @@ This package will use subscriber and publisher nodes to pull the IR readings fro
 
 
 sudo apt-get update
+
 sudo apt-get upgrade
+
 sudo apt-get install git
 
 
@@ -57,9 +59,13 @@ this will update your pi
 
 
 mkdir -p /robot/src
+
 cd~/robot
+
 catkin_init_workspace
+
 catkin_make
+
 source devel/setup.bash
 
 
@@ -72,6 +78,7 @@ source devel/setup.bash
 
 
 cd~/robot/src
+
 catkin_create_pkg publisher rospy
 
 
@@ -82,6 +89,7 @@ catkin_create_pkg publisher rospy
 
 
 cd ~/robot/src/publisher/src
+
 curl -o publisher.py https://github.com/minh215/ControllingRoombaUsingPi/blob/master/publisher.py
 
 
@@ -95,6 +103,7 @@ sudo chmod u+x publisher.py
 
 
 cd ~/robot/src
+
 catkin_create_pkg subscriber rospy
 
 
@@ -105,7 +114,9 @@ catkin_create_pkg subscriber rospy
 
 
 cd ~/robot/src/subscriber/src
+
 curl -o subscriber.py https://github.com/minh215/ControllingRoombaUsingPi/blob/master/subscriber.py
+
 sudo chmod u+x subscriber.py
 
 
@@ -115,8 +126,11 @@ sudo chmod u+x subscriber.py
 ## Run Ros::::::::::::::::::::::::
 
 cd ~/robot
+
 catkin_make
+
 source devel/setup.bash
+
 roscore
 
 
@@ -125,7 +139,9 @@ roscore
 
 
 cd ~/robot
+
 source devel/setup.bash
+
 rosrun publisher publisher.py
 
 
@@ -136,5 +152,7 @@ rosrun publisher publisher.py
 
 
 cd ~/robot
+
 source devel/setup.bash
+
 rosrun subscriber subscriber.py
