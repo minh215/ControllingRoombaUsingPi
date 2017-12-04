@@ -34,7 +34,7 @@ This package will use subscriber and publisher nodes to pull the IR readings fro
 
 
 
-# Working with ROS:::::::::::::::::::::::::::
+# Working with ROS
 ## Enter the following into terminal
 
 
@@ -52,7 +52,7 @@ this will update your pi
 
 
 
-## Now create a workspace::::::::::::::::
+## Now create a workspace
 
 
 
@@ -72,7 +72,7 @@ source devel/setup.bash
 
 
 
-## Create a publisher package::::::::::::::::::::::
+## Create a publisher package
 
 
 
@@ -84,7 +84,7 @@ catkin_create_pkg publisher rospy
 
 
 
-## Clone publisher.py from github:::::::::::::::::::::::::
+## Clone publisher.py from github
 
 
 
@@ -99,7 +99,7 @@ sudo chmod u+x publisher.py
 
 
 
-## Create Subscriber package::::::::::::::::::::::::::
+## Create Subscriber package
 
 
 cd ~/robot/src
@@ -109,7 +109,7 @@ catkin_create_pkg subscriber rospy
 
 
 
-## Clone subscriber from github::::::::::::::::::::::
+## Clone subscriber from github
 
 
 
@@ -124,7 +124,7 @@ sudo chmod u+x subscriber.py
 
 # Now connect the Pi to Roomba using Serial cable
 
-## Run Ros::::::::::::::::::::::::: open the first terminal
+## Run Ros/ open the first terminal
 
 cd ~/robot
 
@@ -136,7 +136,7 @@ roscore
 
 
 
-## Run publisher::::::::::::::::::: open a second terminal
+## Run publisher/ open a second terminal
 
 
 cd ~/robot
@@ -148,7 +148,7 @@ rosrun publisher publisher.py
 
 
 
-## Run subscriber:::::::::::::::::::: Open a third terminal
+## Run subscriber/ Open a third terminal
 
 
 
