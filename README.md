@@ -122,8 +122,9 @@ sudo chmod u+x subscriber.py
 
 
 
-# Now connect the Pi to Roomba using Serial cable: open the first terminal
-## Run Ros::::::::::::::::::::::::
+# Now connect the Pi to Roomba using Serial cable
+
+## Run Ros::::::::::::::::::::::::: open the first terminal
 
 cd ~/robot
 
