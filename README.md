@@ -35,7 +35,7 @@ Working with ROS:::::::::::::::::::::::::::
 Enter the following into terminal
 
 sudo apt-get update
-sudoe apt-get upgrade
+sudo apt-get upgrade
 sudo apt-get install git
 
 this will update your pi
