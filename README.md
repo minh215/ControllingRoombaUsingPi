@@ -36,6 +36,7 @@ This package will use subscriber and publisher nodes to pull the IR readings fro
 
 # Working with ROS
 ## Enter the following into terminal
+#### This will update your pi
 
 
 
@@ -48,12 +49,12 @@ sudo apt-get install git
 
 
 
-this will update your pi
+
 
 
 
 ## Now create a workspace
-
+#### This will create a workspace where we will be working in
 
 
 
@@ -73,7 +74,7 @@ source devel/setup.bash
 
 
 ## Create a publisher package
-
+#### This create a publisher package that will publish the sensors data out
 
 
 
@@ -85,7 +86,7 @@ catkin_create_pkg publisher rospy
 
 
 ## Clone publisher.py from github
-
+#### This takes the files from github and copies it into your Pi
 
 
 cd ~/robot/src/publisher/src
@@ -100,7 +101,7 @@ sudo chmod u+x publisher.py
 
 
 ## Create Subscriber package
-
+#### This creates the subscirber package. The subscriber packages gets the output from the publisher package
 
 cd ~/robot/src
 
@@ -110,7 +111,7 @@ catkin_create_pkg subscriber rospy
 
 
 ## Clone subscriber from github
-
+#### This will copy the subscriber file from github into your pi
 
 
 cd ~/robot/src/subscriber/src
